@@ -11,17 +11,32 @@
 <body>
     <header>
         <div class="header">
-            <span><a href="">Logo</a></span>
-            <a href="">Về chúng tôi</a>
-            <a href="">Thực đơn</a>
-            <a href="">Tin tức</a>
-            <a href="">Cửa hàng</a>
+            <div class="dropdown">
+                <a class="dropbtn" onclick="myFunction()">____
+                </a> 
+                  
+                </a>
+                <div class="dropdown-content" id="myDropdown">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                  </div>
+            </div>
+            <div class="list">
+            <a href="" class="logo"><img  src="/image/98538963-cup-of-hot-coffee-icon-white-icon-on-black-background-inversion.jpg" alt="" width="40px" height="auto" class="special"></a>
+            <ul>
+                <li><a href="">Về chúng tôi</a></li>
+                <li><a href="">Thực đơn</a></li>
+                <li><a href="">Tin tức</a></li>
+                <li><a href="">Cửa hàng</a></li>
+            </ul>
             <input type="image" id="myBtn" src="image/image.png" alt="" >
-            
+        </div>
         </div>
     </header>
     <!-- <button id="myBtn"></button> -->
     <div id="myModal" class="modal">
+        <span class="close">&times;</span>
     <div class="modal-content">
         <div class="user-input">
             <h3>Thông tin người nhận</h3>
@@ -34,7 +49,6 @@
             <input type="text" class="checkout-note" placeholder="Ghi chú">
         </div>
         <div class="shopping-cart">
-            <span class="close">&times;</span>
             <h3>Giỏ hàng</h3>
             <hr>
             
@@ -59,13 +73,16 @@
                 <button id="checkout-button" class="button">Thanh toán</button>
             </div>
         </div>
-        <div>
+        <div class="paying">
+            <div> <h3 id="payment-name"> Phương thức thanh toán</h3> </div>
+            <hr>
+            
             <div class="payment">
-                <h3> Phương thức thanh toán</h3>
                 <div class="payment-name1">
                 <div>
                     <label class="cursor">
                         <input type="radio" name="payment" id="">
+                        <img src="/image/cash.png" alt="" width="20px" height="auto">
                         <span id="cash">Tiền mặt</span>
                     </label>
                 </div>
@@ -73,12 +90,14 @@
                     
                     <label class="cursor">
                         <input type="radio" name="payment" id="">
+                        <img src="/image/atm.png" alt="" width="20px" height="auto">
                         <span id="bank">ATM</span>
                     </label>
                 </div>
                 <div>
                     <label class="cursor">
                         <input type="radio" name="payment" id="">
+                        <img src="/image/visa-logo-preview.png" alt="" width="20px" height="auto">
                         <span id="visa">Visa</span>
                     </label>
                 </div>
@@ -88,12 +107,14 @@
                 <div>
                     <label class="cursor">
                         <input type="radio" name="payment" id="">
+                        <img src="/image/airpay.png" alt="" width="20px" height="20px">
                         <span id="airpay">AirPay</span>
                     </label>
                 </div>
                 <div>
                     <label class="cursor">
                         <input type="radio" name="payment" id="">
+                        <img src="/image/logo-momo.png" alt="" width="20px" height="20px">
                         <span id="momo">Ví Momo</span>
                     </label>
                 </div>
