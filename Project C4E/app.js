@@ -25,7 +25,7 @@ let address_alert = document.querySelector(".checkout-address");
 let checkout_btn = document.getElementById("checkout-button");
 
 let cash = document.getElementById("cash-pay");
-let bank = document.getElementById("bank-pay");
+let bank = document.getElementById("atm-pay");
 let airpay = document.getElementById("airpay-pay");
 let visa = document.getElementById("visa-pay");
 let momo = document.getElementById("momo-pay");
@@ -42,20 +42,24 @@ apply.addEventListener("click", function applyCoupon(){
 })
 
 checkout_btn.addEventListener("click", function newWindow(){
-  if (cash.checked) {
+  if (cash.checked == true) {
     alert("Bạn đã đặt hàng thành công");
+    location.reload();
   }
-  else if (bank.checked) {
+  else if (bank.checked == true) {
     window.open ("https://portal.vietcombank.com.vn/Pages/Home.aspx");
   }
-  else if (momo.checked) {
+  else if (momo.checked == true) {
     window.open ("https://momo.vn/");
   }
-  else if (airpay.checked) {
+  else if (airpay.checked == true) {
     window.open ("https://www.airpay.vn/khuyen-mai/");
   }
-  else if (visa.checked) {
+  else if (visa.checked == true) {
     window.open ("https://www.visa.com.vn/");
+  }
+  else {
+    alert("Bạn phải chọn phương thức thanh toán");
   }
 })
 checkout_btn.addEventListener("click", function showAlert() {
@@ -67,9 +71,6 @@ checkout_btn.addEventListener("click", function showAlert() {
   }
   else if (!address_alert.value) {
     alert("Địa chỉ không thể bỏ trống");
-  } else {
-    alert("Bạn đã đặt hàng thành công");
-    location.reload();
   }
 });
 
