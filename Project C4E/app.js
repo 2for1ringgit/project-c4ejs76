@@ -1,43 +1,8 @@
-// window.onscroll = function() {myFunction()};
-
-// var header = document.getElementById("myHeader");
-// var sticky = header.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
-let menu_item = document.getElementsByClassName("menu-item");
-menu_item.onclick = function addClass(){
-  menu_item.classList.add("cl-green");
-}
-
-
-var slideIndex = 1;
-showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 function currentSlide(n) {
   showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
 var slideIndex = 0;
 showSlides();
@@ -115,17 +80,18 @@ function showData() {
     let html = `
         <div class="out">
             <h1 id="${category.title}" class="item">${category.title}</h1>
+            <span id="border-btm"></span>
             <div class="flex">`;
 
     for (let menuItem of category.data) {
       html += `        
                 <div class="menu-item">
-                    <img class="image" src="${menuItem.image}">
+                    <img class="image" src="${menuItem.image}" alt="${menuItem.name}">
                     <div>
-                        <h1 class="name">${menuItem.name}</h1>
-                        <h1 class="price">${menuItem.price}</h1>
-                        <input type="number" class="number" min="1" max="${menuItem.number}" value="1">
-                        <h1 class="buy-now" onclick="addToCart(event)">MUA NGAY</h1>
+                        <h1 class="name h3-color margin">${menuItem.name}</h1>
+                        <h1 class="price">${menuItem.price} Đ</h1>
+                        <input type="number" class="number" min="1" max="${menuItem.number}" value="1"><br>
+                        <h1 class="buy-now hvr-sweep-to-right" onclick="addToCart(event)">MUA NGAY</h1>
                     </div>
                 </div>`;
     }
@@ -216,14 +182,36 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-function myFunction() {
+function dropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
-}
-window.onclick = function (e) {
-  if (!e.target.matches(".dropbtn")) {
-    var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains("show")) {
-      myDropdown.classList.remove("show");
-    }
-  }
 };
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// };
+function enlargeImage() {
+  document.getElementById("img1").src = this.src;
+  // document.getElementById("caption").innerHTML = this.alt;
+  document.getElementById('myModal2').style.display = "block";
+}
+(function() {
+  var images = document.getElementsByClassName("image");
+
+  for (i = 0; i < images.length; i++) {
+    images[i].onclick = enlargeImage;
+  }
+})();
+let modal2 = document.getElementById('myModal2');
+var span3 = document.getElementsByClassName("close3")[0];
+
+span3.onclick = function() { 
+  modal2.style.display = "none";
+}

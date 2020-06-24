@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
@@ -13,11 +12,11 @@
     <header class="myHeader">
         <div class="header">
             <div class="dropdown">
-                <a class="dropbtn"><img src="./image/dropdown-menu-icon-288757-free-icons-library-dropdown-list-png-512_512.png" alt="" width="30px" height="auto" id="dropdownimg" onclick="myFunction()">
+                <a class="dropbtn" onclick="dropDown()"><img src="./image/dropdown-menu-icon-288757-free-icons-library-dropdown-list-png-512_512.png" alt="" width="30px" height="auto" id="dropdownimg">
                 </a> 
                 <div class="dropdown-content" id="myDropdown">
-                  <a href="#">Tin tức</a><hr>
-                  <a href="#">Thực đơn</a><hr>
+                  <a href="./news.html">Tin tức</a><hr>
+                  <a href="./order.html">Thực đơn</a><hr>
                   <a href="#">Về chúng tôi</a>
                   </div>
             </div>
@@ -27,12 +26,12 @@
             <!-- <a href="" class="logo"><img  src="/image/98538963-cup-of-hot-coffee-icon-white-icon-on-black-background-inversion.jpg" alt="" width="40px" height="auto"></a> -->
             <ul>
                 <li><a href="" class="underline-from-left">Về chúng tôi</a></li>
-                <li><a href="" class="animate-a">Thực đơn</a></li>
-                <li><a href="" class="animate-a">Tin tức</a></li>
+                <li><a href="./order.html" class="animate-a">Thực đơn</a></li>
+                <li><a href="./news.html" class="animate-a">Tin tức</a></li>
                 <li><a href="" class="animate-a">Cửa hàng</a></li>
             </ul>
-            <input type="image" id="myBtn" src="./image/shopping-cart-logo-icon-shopping-cart.png" alt="" onclick="showDataCart()">
         </div>
+        <input type="image" id="myBtn" src="./image/shopping-cart-logo-icon-shopping-cart.png" alt="" onclick="showDataCart()">
         </div>
     </header>
     <div class="slideshow-container">
@@ -50,7 +49,7 @@
           <div class="numbertext">3 / 3</div>
           <img src="./image/img3.webp" style="width:100%">
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="prev" onclick="plusSlides(0)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
@@ -60,6 +59,11 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     <!-- <button id="myBtn"></button> -->
+    <div id="myModal2" class="modal2">
+        <span class="close3">&times;</span>
+        <img class="modal-content2" id="img1">
+        <!-- <div id="caption"></div> -->
+      </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <div class="user-input">
@@ -158,10 +162,10 @@
       <section id="main">
         <div class="menu-tab">
             <a href="#NỔI BẬT" class="menu-link" onclick="addClass()">NỔI BẬT</a>
-            <a href="#CÀ PHÊ" class="menu-link">CÀ PHÊ</a>
-            <a href="#TRÀ TRÁI CÂY" class="menu-link">TRÀ TRÁI CÂY</a>
-            <a href="#SINH TỐ" class="menu-link">SINH TỐ</a>
-            <a href="#BÁNH NGỌT" class="menu-link">BÁNH NGỌT</a>
+            <a href="#CÀ PHÊ" class="menu-link" onclick="addClass()">CÀ PHÊ</a>
+            <a href="#TRÀ TRÁI CÂY" class="menu-link" onclick="addClass()">TRÀ TRÁI CÂY</a>
+            <a href="#SINH TỐ" class="menu-link" onclick="addClass()">SINH TỐ</a>
+            <a href="#BÁNH NGỌT" class="menu-link" onclick="addClass()">BÁNH NGỌT</a>
         </div>
         <div id="main-menu" class="main-menu">
 
