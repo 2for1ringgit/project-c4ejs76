@@ -11,7 +11,7 @@ body {
 header {
   width: 100%;
   height: 50px;
-  background-image: url(/Project\ C4E/image/black-patterns-18.jpg);
+  background-image: url(./image/black-patterns-18.jpg);
   background-repeat: repeat-x;
 }
 .header a {
@@ -40,10 +40,14 @@ header {
 .dropdown {
     display: none;
 }
-.dropbtn {
+/* .dropbtn {
     border-top: 5px solid white;
     border-bottom: 5px solid white;
     padding: 0 !important;
+} */
+.dropbtn:hover, .dropdown-content a:hover {
+  border: 0 !important;
+  color: green;
 }
 .dropbtn:hover {
     border-bottom: none;
@@ -91,6 +95,12 @@ ul {
 }
 ul li {
   list-style-type: none;
+}
+.coffee-name {
+  text-transform: uppercase;
+  font-size: 28px;
+  border: none !important;
+  letter-spacing: 1px;
 }
 .header span {
   padding-left: 100px;
@@ -588,7 +598,7 @@ footer a:hover {
 } 
 .all{
   display: flex;
-  margin-left: 100px;
+  margin-left: 10%;
 }
 .line{
   background-color: green;
@@ -670,7 +680,7 @@ footer a:hover {
 }
 h2#blog{
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 10%;
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -703,7 +713,7 @@ h2#blog{
   width: 50px;
   height: 5px;
   margin-top: 3px;
-  margin-left: 100px;
+  margin-left: 10%;
   margin-bottom: 20px;
 }
 .img{
@@ -735,6 +745,7 @@ h1{
   color: black;
   text-transform: uppercase;
   word-wrap: break-word;
+  color: black;
 }
 .name:hover{
   color: green;
@@ -783,14 +794,14 @@ ul{
   margin-bottom: 20px;
 }
 
-#tenquan {
+/* #tenquan {
   height: 100px;
   width: 100%;
   border: 1px solid black;
   text-align: center;
   line-height: 100px;
   background-color: darkgoldenrod;
-}
+} */
 #main {
   width: 85%;
   height: auto;
@@ -804,16 +815,21 @@ ul{
   justify-content: space-around;
   width: 15%;
   height: 350px;
-  background-color: rgb(0, 238, 255);
+  /* background-color: rgb(0, 238, 255); */
   margin-left: 10%;
   position: sticky;
   top: 0;
+}
+.menu-item {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .menu-link {
   width: 70%;
   margin-left: 15%;
   margin-bottom: -5%;
   text-decoration: none;
+  color: white;
 }
 .main-menu {
   width: 65%;
@@ -821,7 +837,7 @@ ul{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 
 #out {
@@ -980,22 +996,22 @@ div.shopping-cart div {
   height: 250px;
 }
 
-.name {
+/* .name {
   width: 250px;
   height: 40px;
   font-size: 15px;
   margin-top: 5px;
   margin-left: 15px;
   line-height: 40px;
-}
+} */
 
 .price {
   width: 100px;
   height: 40px;
   font-size: 20px;
   margin-top: 5px;
-  color: rgb(185, 32, 40);
-  margin-left: 15px;
+  color: green;
+  /* margin-left: 15px; */
   line-height: 40px;
 }
 
@@ -1010,7 +1026,7 @@ div.shopping-cart div {
   background-color: green;
   line-height: 50px;
   margin-top: 5px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
   margin-bottom: 15px;
   cursor: pointer;
 }
@@ -1019,7 +1035,7 @@ div.shopping-cart div {
   width: 100px;
   height: 20px;
   margin-top: 5px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 
 #anhgiohang {
@@ -1062,7 +1078,7 @@ div.shopping-cart div {
       width: 400px;
       height: 420px;
   }
-  .bai1>img{
+  .bai1 img{
       width: 400px;
       height: 150px;
   }
@@ -1151,6 +1167,8 @@ div.shopping-cart div {
     justify-content: space-between;
     align-items: center;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     
   }
   .dropdown {
@@ -1177,6 +1195,10 @@ div.shopping-cart div {
   }
   .checkout-btn {
     bottom: 100;
+  }
+  .coffee-name {
+    display: block !important;
+    text-align: center;
   }
   
 }

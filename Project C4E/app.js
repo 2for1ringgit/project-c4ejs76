@@ -63,6 +63,7 @@ let visa = document.getElementById("visa-pay");
 let momo = document.getElementById("momo-pay");
 let promo = document.getElementById("promo");
 let apply = document.getElementById("apply");
+
 apply.addEventListener("click", function applyCoupon(){
   if (! promo.value) {
     alert ("Mã ưu đãi không hợp lệ");
